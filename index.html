@@ -3,1255 +3,911 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Click vs. Select - Technical Writing Guide</title>
+    <title>Workday Style Guide: Click vs Select Training</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-        
+
         body {
-            background: #f8f9fa;
-            padding: 40px 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: #f5f5f5;
+            color: #333;
         }
-        
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        
-        /* Header */
-        .header {
+
+        header {
             background: #1a1a1a;
             color: white;
-            padding: 32px 40px;
-            border-bottom: 4px solid #4A90A4;
+            padding: 24px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         }
-        
-        .header h1 {
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        h1 {
             font-size: 28px;
-            font-weight: 700;
+            font-weight: 600;
             margin-bottom: 8px;
         }
-        
-        .header p {
+
+        .subtitle {
+            color: #4A90A4;
             font-size: 16px;
-            color: rgba(255, 255, 255, 0.8);
+            font-weight: 400;
         }
-        
-        /* Content */
-        .content {
-            padding: 40px;
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 24px;
         }
-        
-        h2 {
-            font-size: 24px;
-            color: #1a1a1a;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-        
-        h3 {
-            font-size: 18px;
-            color: #2d3748;
-            margin-top: 32px;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-        
-        p {
-            font-size: 16px;
-            line-height: 1.7;
-            color: #4a5568;
-            margin-bottom: 16px;
-        }
-        
-        /* Rule Cards */
-        .rule-card {
-            background: #f8f9fa;
-            border-left: 4px solid #4A90A4;
-            padding: 24px;
-            margin: 24px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        
-        .rule-card h3 {
-            margin-top: 0;
-            color: #1a1a1a;
-        }
-        
-        .rule-card .rule-text {
-            font-size: 18px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 12px;
-        }
-        
-        .rule-card .explanation {
-            font-size: 15px;
-            color: #4a5568;
-            line-height: 1.6;
-        }
-        
-        /* Comparison Table */
-        .comparison {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin: 32px 0;
-        }
-        
-        .comparison-card {
+
+        .score-tracker {
             background: white;
-            border: 2px solid #e2e8f0;
+            padding: 20px 32px;
             border-radius: 8px;
-            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 40px;
+            text-align: center;
+            border-left: 4px solid #4A90A4;
         }
-        
-        .comparison-card.click-card {
-            border-color: #4A90A4;
-            background: rgba(74, 144, 164, 0.05);
-        }
-        
-        .comparison-card.select-card {
-            border-color: #5BA3B8;
-            background: rgba(91, 163, 184, 0.05);
-        }
-        
-        .comparison-card h4 {
+
+        .score-tracker h2 {
             font-size: 20px;
-            margin-bottom: 16px;
-            font-weight: 700;
+            margin-bottom: 8px;
         }
-        
-        .comparison-card.click-card h4 {
+
+        .score {
+            font-size: 48px;
+            font-weight: 700;
             color: #4A90A4;
         }
-        
-        .comparison-card.select-card h4 {
-            color: #5BA3B8;
+
+        .context-box {
+            background: #e8f4f8;
+            padding: 20px 24px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            border-left: 4px solid #4A90A4;
         }
-        
+
+        .context-box p {
+            line-height: 1.6;
+            color: #2c5c6c;
+        }
+
+        .comparison-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .comparison-card {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .comparison-card h3 {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-bottom: 12px;
+            border-bottom: 3px solid #4A90A4;
+        }
+
+        .comparison-card.click-card h3 {
+            border-bottom-color: #e67e22;
+        }
+
         .comparison-card ul {
             list-style: none;
             padding-left: 0;
         }
-        
+
         .comparison-card li {
             padding: 8px 0;
-            color: #4a5568;
-            font-size: 15px;
+            padding-left: 24px;
+            position: relative;
             line-height: 1.5;
         }
-        
-        .comparison-card li::before {
-            content: "✓ ";
+
+        .comparison-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
             color: #4A90A4;
             font-weight: bold;
-            margin-right: 8px;
         }
-        
-        /* Practice Section */
-        .practice-section {
-            background: #f8f9fa;
+
+        .comparison-card.click-card li:before {
+            color: #e67e22;
+        }
+
+        .demo-section {
+            background: white;
             padding: 32px;
             border-radius: 8px;
-            margin: 32px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-bottom: 24px;
         }
-        
-        .practice-section h2 {
-            margin-top: 0;
-        }
-        
-        .practice-item {
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 24px;
-            margin: 20px 0;
-        }
-        
-        .practice-item .scenario {
-            font-size: 16px;
-            color: #2d3748;
-            font-weight: 600;
-            margin-bottom: 16px;
-            padding: 16px;
-            background: #f8f9fa;
-            border-radius: 6px;
-        }
-        
-        .practice-item .question {
-            font-size: 15px;
-            color: #4a5568;
-            margin-bottom: 16px;
-        }
-        
-        .answer-buttons {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-        
-        .answer-btn {
-            background: white;
-            border: 2px solid #e2e8f0;
-            padding: 16px 24px;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-align: center;
-        }
-        
-        .answer-btn:hover {
-            border-color: #4A90A4;
-            background: rgba(74, 144, 164, 0.05);
-        }
-        
-        .answer-btn.correct {
-            border-color: #48bb78;
-            background: rgba(72, 187, 120, 0.1);
-            color: #22543d;
-        }
-        
-        .answer-btn.incorrect {
-            border-color: #f56565;
-            background: rgba(245, 101, 101, 0.1);
-            color: #742a2a;
-        }
-        
-        .feedback {
-            margin-top: 16px;
-            padding: 16px;
-            border-radius: 6px;
-            display: none;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        
-        .feedback.show {
-            display: block;
-        }
-        
-        .feedback.correct {
-            background: rgba(72, 187, 120, 0.1);
-            border-left: 4px solid #48bb78;
-            color: #22543d;
-        }
-        
-        .feedback.incorrect {
-            background: rgba(245, 101, 101, 0.1);
-            border-left: 4px solid #f56565;
-            color: #742a2a;
-        }
-        
-        /* Animated Cursor */
-        .animated-cursor {
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            pointer-events: none;
-            z-index: 100;
-            opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-        
-        .animated-cursor::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 10px solid #1a1a1a;
-            border-right: 10px solid transparent;
-            border-top: 7px solid #1a1a1a;
-            border-bottom: 7px solid transparent;
-            transform: rotate(-45deg);
-            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
-        }
-        
-        .animated-cursor.clicking::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 30px;
-            height: 30px;
-            border: 2px solid #4A90A4;
-            border-radius: 50%;
-            transform: translate(-50%, -50%);
-            animation: clickRipple 0.4s ease-out;
-        }
-        
-        @keyframes clickRipple {
-            0% {
-                width: 20px;
-                height: 20px;
-                opacity: 1;
-            }
-            100% {
-                width: 40px;
-                height: 40px;
-                opacity: 0;
-            }
-        }
-        
-        @keyframes cursorMove {
-            0% {
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-            }
-        }
-        
-        /* Workday UI Demo Styles */
-        .ui-demo {
-            background: #f8f9fa;
-            padding: 24px;
-            border-radius: 8px;
+
+        .demo-header {
             margin-bottom: 20px;
         }
-        
-        .demo-label {
-            font-size: 14px;
-            font-weight: 600;
-            color: #4a5568;
-            margin-bottom: 12px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .workday-frame {
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-            position: relative;
-        }
-        
-        .workday-header {
-            background: #1a1a1a;
+
+        .demo-number {
+            background: #4A90A4;
             color: white;
-            padding: 16px 20px;
-            font-size: 16px;
-            font-weight: 600;
-            border-bottom: 3px solid #4A90A4;
-        }
-        
-        .workday-content {
-            padding: 24px;
-            min-height: 200px;
-        }
-        
-        .form-section {
-            margin: 0;
-        }
-        
-        .section-title {
-            font-size: 15px;
-            font-weight: 600;
-            color: #2d3748;
-            margin-bottom: 16px;
-        }
-        
-        .field-label {
-            display: block;
+            padding: 4px 12px;
+            border-radius: 4px;
             font-size: 14px;
-            font-weight: 500;
-            color: #4a5568;
+            font-weight: 600;
+            display: inline-block;
             margin-bottom: 8px;
         }
-        
-        /* Checkbox Styles */
-        .checkbox-group {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
+
+        .demo-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a1a;
         }
-        
-        .checkbox-item {
+
+        .demo-container {
+            background: #fafafa;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 60px 40px;
+            margin-bottom: 24px;
+            position: relative;
+            min-height: 200px;
             display: flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+        }
+
+        .cursor {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            pointer-events: none;
+            z-index: 100;
+        }
+
+        .cursor svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 2px 4px rgba(0,0,0,0.3));
+        }
+
+        .ripple {
+            position: absolute;
+            border: 2px solid #4A90A4;
+            border-radius: 50%;
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        @keyframes ripple-effect {
+            0% {
+                width: 0;
+                height: 0;
+                opacity: 1;
+            }
+            100% {
+                width: 60px;
+                height: 60px;
+                opacity: 0;
+            }
+        }
+
+        .workday-checkbox {
+            display: flex;
+            align-items: center;
             cursor: pointer;
-            padding: 8px;
+            padding: 12px;
             border-radius: 4px;
-            transition: background 0.2s ease;
+            transition: background 0.2s;
         }
-        
-        .checkbox-item:hover {
-            background: #f8f9fa;
+
+        .workday-checkbox:hover {
+            background: #f0f0f0;
         }
-        
-        .checkbox {
+
+        .checkbox-box {
             width: 20px;
             height: 20px;
-            border: 2px solid #cbd5e0;
-            border-radius: 4px;
+            border: 2px solid #666;
+            border-radius: 3px;
+            margin-right: 12px;
             position: relative;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
+            transition: all 0.3s;
         }
-        
-        .checkbox.checked {
+
+        .checkbox-box.checked {
             background: #4A90A4;
             border-color: #4A90A4;
         }
-        
-        .checkbox.checked::after {
-            content: '✓';
+
+        .checkbox-box.checked:after {
+            content: "✓";
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             color: white;
             font-size: 14px;
             font-weight: bold;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
-        
-        .checkbox-item label {
+
+        .checkbox-label {
             font-size: 15px;
-            color: #2d3748;
-            cursor: pointer;
+            color: #333;
         }
-        
-        /* Radio Button Styles */
+
+        .workday-button {
+            background: #4A90A4;
+            color: white;
+            border: none;
+            padding: 12px 32px;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .workday-button:hover {
+            background: #3d7a8a;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        }
+
+        .workday-button:active {
+            transform: scale(0.98);
+        }
+
+        .workday-dropdown {
+            position: relative;
+            width: 280px;
+        }
+
+        .dropdown-header {
+            background: white;
+            border: 2px solid #999;
+            border-radius: 4px;
+            padding: 12px 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.2s;
+        }
+
+        .dropdown-header:hover {
+            border-color: #4A90A4;
+        }
+
+        .dropdown-header.open {
+            border-color: #4A90A4;
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+        .dropdown-arrow {
+            transition: transform 0.3s;
+        }
+
+        .dropdown-arrow.open {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            border: 2px solid #4A90A4;
+            border-top: none;
+            border-radius: 0 0 4px 4px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        .dropdown-menu.open {
+            max-height: 200px;
+        }
+
+        .dropdown-item {
+            padding: 12px 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .dropdown-item:hover {
+            background: #e8f4f8;
+        }
+
+        .dropdown-item.selected {
+            background: #4A90A4;
+            color: white;
+        }
+
+        .workday-link {
+            color: #4A90A4;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 0;
+            display: inline-block;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .workday-link:hover {
+            border-bottom-color: #4A90A4;
+        }
+
         .radio-group {
             display: flex;
             flex-direction: column;
             gap: 12px;
         }
-        
-        .radio-item {
+
+        .radio-option {
             display: flex;
             align-items: center;
-            gap: 12px;
             cursor: pointer;
-            padding: 8px;
+            padding: 12px;
             border-radius: 4px;
-            transition: background 0.2s ease;
+            transition: background 0.2s;
         }
-        
-        .radio-item:hover {
-            background: #f8f9fa;
+
+        .radio-option:hover {
+            background: #f0f0f0;
         }
-        
-        .radio {
+
+        .radio-circle {
             width: 20px;
             height: 20px;
-            border: 2px solid #cbd5e0;
+            border: 2px solid #666;
             border-radius: 50%;
+            margin-right: 12px;
             position: relative;
-            transition: all 0.3s ease;
-            flex-shrink: 0;
+            transition: all 0.3s;
         }
-        
-        .radio.selected {
+
+        .radio-circle.selected {
             border-color: #4A90A4;
         }
-        
-        .radio.selected::after {
-            content: '';
+
+        .radio-circle.selected:after {
+            content: "";
             position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
             width: 10px;
             height: 10px;
             background: #4A90A4;
             border-radius: 50%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
-        
-        .radio-item label {
-            font-size: 15px;
-            color: #2d3748;
+
+        .icon-button {
+            background: none;
+            border: none;
             cursor: pointer;
-        }
-        
-        /* Dropdown Styles */
-        .form-field {
-            margin: 0;
-        }
-        
-        .dropdown {
-            position: relative;
-        }
-        
-        .dropdown-display {
-            padding: 10px 14px;
-            border: 2px solid #e2e8f0;
-            border-radius: 6px;
-            background: white;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            font-size: 15px;
-            color: #2d3748;
-        }
-        
-        .dropdown-display:hover {
-            border-color: #cbd5e0;
-        }
-        
-        .dropdown-menu {
-            position: absolute;
-            top: calc(100% + 4px);
-            left: 0;
-            right: 0;
-            background: white;
-            border: 2px solid #e2e8f0;
-            border-radius: 6px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 10;
-        }
-        
-        .dropdown-menu.open {
-            max-height: 200px;
-            opacity: 1;
-        }
-        
-        .dropdown-option {
-            padding: 10px 14px;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            font-size: 15px;
-            color: #2d3748;
-        }
-        
-        .dropdown-option:hover {
-            background: #f8f9fa;
-        }
-        
-        .dropdown-option.selected {
-            background: rgba(74, 144, 164, 0.1);
-            color: #4A90A4;
-            font-weight: 600;
-        }
-        
-        /* Button Styles */
-        .button-group {
-            display: flex;
-            gap: 12px;
-            margin-top: 24px;
-            justify-content: flex-end;
-        }
-        
-        .workday-btn {
-            padding: 10px 24px;
-            border-radius: 6px;
-            font-size: 15px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-        
-        .workday-btn.primary {
-            background: #1a1a1a;
-            color: white;
-            border-color: #1a1a1a;
-        }
-        
-        .workday-btn.primary:hover {
-            background: #2d2d2d;
-        }
-        
-        .workday-btn.primary.clicked {
-            transform: scale(0.98);
-            box-shadow: 0 0 0 4px rgba(74, 144, 164, 0.3);
-        }
-        
-        .workday-btn.secondary {
-            background: white;
-            color: #2d3748;
-            border-color: #e2e8f0;
-        }
-        
-        .workday-btn.secondary:hover {
-            background: #f8f9fa;
-        }
-        
-        /* Time Entry Styles */
-        .time-entry-row {
             padding: 12px;
-            background: #f8f9fa;
-            border-radius: 6px;
-            margin-bottom: 8px;
-            font-size: 15px;
-            color: #2d3748;
-        }
-        
-        /* Employee Card Styles */
-        .employee-card {
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .employee-info {
-            flex: 1;
-        }
-        
-        .employee-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: #1a1a1a;
-            margin-bottom: 4px;
-        }
-        
-        .employee-title {
-            font-size: 14px;
-            color: #718096;
-        }
-        
-        .action-link {
-            color: #4A90A4;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-            transition: all 0.2s ease;
-            padding: 8px 12px;
             border-radius: 4px;
-        }
-        
-        .action-link:hover {
-            background: rgba(74, 144, 164, 0.1);
-            color: #5BA3B8;
-        }
-        
-        .action-link.clicked {
-            transform: scale(0.98);
-        }
-        
-        /* Report Row Styles */
-        .report-row {
-            display: flex;
-            justify-content: space-between;
+            transition: all 0.2s;
+            display: inline-flex;
             align-items: center;
-            padding: 16px;
-            border: 2px solid #e2e8f0;
-            border-radius: 8px;
-        }
-        
-        .report-name {
-            font-size: 15px;
-            color: #2d3748;
-        }
-        
-        .icon-btn {
-            width: 40px;
-            height: 40px;
-            border: 2px solid #e2e8f0;
-            border-radius: 6px;
-            background: white;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.3s ease;
-        }
-        
-        .icon-btn svg {
-            width: 20px;
-            height: 20px;
-            color: #4a5568;
-        }
-        
-        .icon-btn:hover {
-            background: #f8f9fa;
-            border-color: #cbd5e0;
-        }
-        
-        .icon-btn.clicked {
-            transform: scale(0.95);
-            background: rgba(74, 144, 164, 0.1);
-            border-color: #4A90A4;
-        }
-        
-        .icon-btn.clicked svg {
+            gap: 8px;
             color: #4A90A4;
+            font-size: 15px;
         }
-        
-        /* Modal Styles */
-        .workday-frame.modal-demo {
-            min-height: 300px;
-            position: relative;
+
+        .icon-button:hover {
+            background: #e8f4f8;
         }
-        
+
+        .icon-button svg {
+            width: 24px;
+            height: 24px;
+        }
+
         .modal-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 5;
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-        
-        .modal-overlay.hiding {
-            opacity: 0;
-        }
-        
-        .modal {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-            width: 80%;
-            max-width: 400px;
-            z-index: 10;
-            opacity: 1;
-            transition: all 0.3s ease;
-        }
-        
-        .modal.hiding {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.95);
-        }
-        
-        .modal-header {
-            padding: 16px 20px;
-            border-bottom: 1px solid #e2e8f0;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .modal-header span {
-            font-size: 16px;
-            font-weight: 600;
-            color: #1a1a1a;
-        }
-        
-        .close-btn {
-            width: 32px;
-            height: 32px;
-            border: none;
-            background: transparent;
-            font-size: 20px;
-            color: #718096;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: all 0.2s ease;
+            background: rgba(0,0,0,0.5);
             display: flex;
             align-items: center;
             justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
         }
-        
-        .close-btn:hover {
-            background: #f8f9fa;
-            color: #2d3748;
+
+        .modal-overlay.show {
+            opacity: 1;
         }
-        
-        .close-btn.clicked {
-            background: rgba(245, 101, 101, 0.1);
-            color: #f56565;
-        }
-        
-        .modal-body {
-            padding: 20px;
-        }
-        
-        .modal-body p {
-            margin: 0;
-            color: #4a5568;
-            line-height: 1.6;
-        }
-        
-        /* Animation Classes */
-        @keyframes checkboxCheck {
-            0% {
-                border-color: #cbd5e0;
-                background: white;
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                border-color: #4A90A4;
-                background: #4A90A4;
-            }
-        }
-        
-        @keyframes radioSelect {
-            0% {
-                border-color: #cbd5e0;
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                border-color: #4A90A4;
-            }
-        }
-        
-        @keyframes buttonClick {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(0.98);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-        
-        /* Examples */
-        .example-box {
+
+        .modal-content {
             background: white;
-            border: 2px solid #e2e8f0;
             border-radius: 8px;
-            padding: 20px;
-            margin: 16px 0;
+            padding: 24px;
+            max-width: 400px;
+            width: 90%;
+            position: relative;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            transform: scale(0.9);
+            transition: transform 0.3s;
         }
-        
-        .example-box .label {
-            font-size: 12px;
-            text-transform: uppercase;
-            font-weight: 700;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
+
+        .modal-overlay.show .modal-content {
+            transform: scale(1);
         }
-        
-        .example-box.good {
-            border-color: #48bb78;
-            background: rgba(72, 187, 120, 0.05);
+
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+            padding-bottom: 16px;
+            border-bottom: 2px solid #e0e0e0;
         }
-        
-        .example-box.good .label {
-            color: #22543d;
+
+        .modal-title {
+            font-size: 18px;
+            font-weight: 600;
         }
-        
-        .example-box.bad {
-            border-color: #f56565;
-            background: rgba(245, 101, 101, 0.05);
-        }
-        
-        .example-box.bad .label {
-            color: #742a2a;
-        }
-        
-        .example-text {
-            font-size: 15px;
-            color: #2d3748;
-            font-family: 'Courier New', monospace;
-            background: white;
-            padding: 12px;
+
+        .close-button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #666;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 4px;
+            transition: all 0.2s;
         }
-        
-        /* Score Display */
-        .score-display {
-            position: sticky;
-            top: 20px;
-            background: #1a1a1a;
+
+        .close-button:hover {
+            background: #f0f0f0;
+            color: #333;
+        }
+
+        .quiz-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+        }
+
+        .quiz-btn {
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 600;
+            border: 2px solid;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        .quiz-btn.select-btn {
+            border-color: #4A90A4;
+            color: #4A90A4;
+        }
+
+        .quiz-btn.select-btn:hover {
+            background: #4A90A4;
             color: white;
-            padding: 16px 24px;
+        }
+
+        .quiz-btn.click-btn {
+            border-color: #e67e22;
+            color: #e67e22;
+        }
+
+        .quiz-btn.click-btn:hover {
+            background: #e67e22;
+            color: white;
+        }
+
+        .quiz-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .feedback {
+            margin-top: 16px;
+            padding: 16px;
+            border-radius: 4px;
+            font-size: 15px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .feedback.show {
+            display: block;
+        }
+
+        .feedback.correct {
+            background: #d4edda;
+            border: 2px solid #28a745;
+            color: #155724;
+        }
+
+        .feedback.incorrect {
+            background: #f8d7da;
+            border: 2px solid #dc3545;
+            color: #721c24;
+        }
+
+        .feedback strong {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        .decision-tree {
+            background: white;
+            padding: 32px;
             border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            margin-top: 40px;
+        }
+
+        .decision-tree h2 {
             text-align: center;
             margin-bottom: 32px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            font-size: 24px;
+            color: #1a1a1a;
         }
-        
-        .score-display h3 {
+
+        .tree-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tree-node {
+            background: #e8f4f8;
+            border: 2px solid #4A90A4;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+            text-align: center;
+            font-weight: 600;
             font-size: 16px;
-            margin: 0;
+        }
+
+        .tree-branches {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .tree-branch {
+            text-align: center;
+        }
+
+        .branch-label {
+            background: #f5f5f5;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 16px;
+            font-weight: 600;
+            color: #666;
+        }
+
+        .tree-result {
+            padding: 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .tree-result.select-result {
+            background: #4A90A4;
             color: white;
         }
-        
-        .score-number {
-            font-size: 32px;
-            font-weight: 700;
-            color: #4A90A4;
-            margin-top: 8px;
+
+        .tree-result.click-result {
+            background: #e67e22;
+            color: white;
         }
-        
-        
+
+        .tree-examples {
+            margin-top: 12px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 1.6;
+        }
+
         @media (max-width: 768px) {
-            .comparison, .answer-buttons, .quick-ref-grid {
+            .comparison-section {
                 grid-template-columns: 1fr;
             }
-            
-            .content {
-                padding: 24px;
+
+            .tree-branches {
+                grid-template-columns: 1fr;
+            }
+
+            .quiz-buttons {
+                flex-direction: column;
+            }
+
+            .quiz-btn {
+                width: 100%;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="header">
-            <h1>Click vs. Select: Technical Writing Standard</h1>
-            <p>Workday User Guide Documentation</p>
+    <header>
+        <div class="header-content">
+            <h1>Workday Documentation Style Guide</h1>
+            <p class="subtitle">Interactive Training: Click vs Select</p>
         </div>
-        
-        <div class="content">
-            <div class="score-display">
-                <h3>Your Score</h3>
-                <div class="score-number"><span id="correctCount">0</span> / <span id="totalCount">8</span></div>
+    </header>
+
+    <div class="container">
+        <div class="score-tracker">
+            <h2>Your Progress</h2>
+            <div class="score"><span id="score">0</span>/8</div>
+        </div>
+
+        <div class="context-box">
+            <p><strong>Industry Standard:</strong> This training aligns with Microsoft, IBM, and Workday style guides. The core principle: use "select" for actions that change a persistent state (user makes a choice), and "click" for immediate actions without persistent state changes.</p>
+        </div>
+
+        <div class="comparison-section">
+            <div class="comparison-card">
+                <h3>Use SELECT for:</h3>
+                <ul>
+                    <li>Checkboxes (toggling on/off states)</li>
+                    <li>Radio buttons (choosing one option)</li>
+                    <li>Dropdown menus (picking from a list)</li>
+                    <li>Toggle switches (enabling/disabling)</li>
+                    <li>List items (making selections)</li>
+                </ul>
             </div>
-            
-            <h2>The Core Principle</h2>
-            
-            <div class="rule-card">
-                <div class="rule-text">Use "select" when the element's state changes and persists.</div>
-                <div class="explanation">
-                    If the UI element becomes marked, chosen, or highlighted AND remains that way into the next step or section, use "select." The key question: <strong>Does it stay selected?</strong>
-                </div>
+            <div class="comparison-card click-card">
+                <h3>Use CLICK for:</h3>
+                <ul>
+                    <li>Submit/Action buttons (Save, Delete, Submit)</li>
+                    <li>Navigation links (View Profile, Go to Dashboard)</li>
+                    <li>Icons (Download, Print, Close)</li>
+                    <li>Tabs (switching views)</li>
+                    <li>Modal close buttons</li>
+                </ul>
             </div>
-            
-            <div class="rule-card">
-                <div class="rule-text">Use "click" for immediate actions without persistent state.</div>
-                <div class="explanation">
-                    If clicking the element triggers an immediate action, opens something, or navigates somewhere WITHOUT the element itself maintaining a selected state, use "click."
-                </div>
+        </div>
+
+        <!-- Demo 1: Checkbox -->
+        <div class="demo-section" data-demo="1">
+            <div class="demo-header">
+                <div class="demo-number">Demo 1 of 8</div>
+                <div class="demo-title">Benefits Enrollment - Email Notifications</div>
             </div>
-            
-            <h2>Industry Standards & Your Rule</h2>
-            
-            <p>Your team's approach aligns with major technical writing standards. Here's what the research shows:</p>
-            
-            <div class="comparison">
-                <div class="comparison-card select-card">
-                    <h4>Use SELECT for:</h4>
-                    <ul>
-                        <li>Checkboxes (they stay checked)</li>
-                        <li>Radio buttons (they stay selected)</li>
-                        <li>Dropdown options (selection persists)</li>
-                        <li>List items that remain highlighted</li>
-                        <li>Tabs that show active state</li>
-                        <li>Text/cells you're marking for an action</li>
-                    </ul>
-                </div>
-                
-                <div class="comparison-card click-card">
-                    <h4>Use CLICK for:</h4>
-                    <ul>
-                        <li>Action buttons (Submit, Save, Cancel)</li>
-                        <li>Links that navigate</li>
-                        <li>Icons that open menus/dialogs</li>
-                        <li>Buttons that perform immediate tasks</li>
-                        <li>Elements with no persistent state change</li>
-                        <li>Commands that execute instantly</li>
-                    </ul>
+            <div class="demo-container" id="demo1">
+                <div class="workday-checkbox" id="checkbox1">
+                    <div class="checkbox-box"></div>
+                    <div class="checkbox-label">Receive email notifications about benefits</div>
                 </div>
             </div>
-            
-            <h3>Why This Matters</h3>
-            <p>Consistent terminology improves:</p>
-            <ul style="margin-left: 24px; color: #4a5568; line-height: 1.8;">
-                <li><strong>Clarity:</strong> Users understand exactly what will happen</li>
-                <li><strong>Scannability:</strong> "Select" signals a choice that persists</li>
-                <li><strong>Accessibility:</strong> Screen readers handle these actions differently</li>
-                <li><strong>Translation:</strong> Consistent verbs translate more reliably</li>
-            </ul>
-            
-            <!-- Practice Section -->
-            <div class="practice-section">
-                <h2>Practice: Watch and Decide</h2>
-                <p>Watch each animation showing a Workday interface interaction, then choose the correct verb.</p>
-                
-                <!-- Question 1: Checkbox -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #1</div>
-                        <div class="workday-frame">
-                            <div class="animated-cursor" id="cursor1"></div>
-                            <div class="workday-header">Benefits Enrollment</div>
-                            <div class="workday-content">
-                                <div class="form-section">
-                                    <div class="section-title">Select Your Benefits</div>
-                                    <div class="checkbox-group">
-                                        <div class="checkbox-item">
-                                            <div class="checkbox" id="demo1-check"></div>
-                                            <label>Dental Insurance - Premium Plan</label>
-                                        </div>
-                                        <div class="checkbox-item">
-                                            <div class="checkbox"></div>
-                                            <label>Vision Insurance</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(1, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(1, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback1"></div>
+        </div>
+
+        <!-- Demo 2: Submit Button -->
+        <div class="demo-section" data-demo="2">
+            <div class="demo-header">
+                <div class="demo-number">Demo 2 of 8</div>
+                <div class="demo-title">Time Entry - Submit Hours</div>
+            </div>
+            <div class="demo-container" id="demo2">
+                <button class="workday-button" id="submit-btn">Submit Time</button>
+            </div>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(2, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(2, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback2"></div>
+        </div>
+
+        <!-- Demo 3: Dropdown -->
+        <div class="demo-section" data-demo="3">
+            <div class="demo-header">
+                <div class="demo-number">Demo 3 of 8</div>
+                <div class="demo-title">Language Preference Selection</div>
+            </div>
+            <div class="demo-container" id="demo3">
+                <div class="workday-dropdown" id="dropdown1">
+                    <div class="dropdown-header">
+                        <span id="dropdown-selected">English (US)</span>
+                        <span class="dropdown-arrow">▼</span>
                     </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(1, 'select', this)">SELECT</button>
-                        <button class="answer-btn" onclick="checkAnswer(1, 'click', this)">CLICK</button>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-item">English (US)</div>
+                        <div class="dropdown-item">Spanish</div>
+                        <div class="dropdown-item">French</div>
+                        <div class="dropdown-item">German</div>
                     </div>
-                    <div class="feedback" id="feedback1"></div>
-                </div>
-                
-                <!-- Question 2: Submit Button -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #2</div>
-                        <div class="workday-frame">
-                            <div class="animated-cursor" id="cursor2"></div>
-                            <div class="workday-header">Time Entry</div>
-                            <div class="workday-content">
-                                <div class="form-section">
-                                    <div class="time-entry-row">
-                                        <span>Monday: 8.0 hours</span>
-                                    </div>
-                                    <div class="time-entry-row">
-                                        <span>Tuesday: 8.0 hours</span>
-                                    </div>
-                                    <div class="button-group">
-                                        <button class="workday-btn secondary">Cancel</button>
-                                        <button class="workday-btn primary" id="demo2-btn">Submit for Approval</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(2, 'click', this)">CLICK</button>
-                        <button class="answer-btn" onclick="checkAnswer(2, 'select', this)">SELECT</button>
-                    </div>
-                    <div class="feedback" id="feedback2"></div>
-                </div>
-                
-                <!-- Question 3: Dropdown -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #3</div>
-                        <div class="workday-frame">
-                            <div class="animated-cursor" id="cursor3"></div>
-                            <div class="workday-header">Employee Profile</div>
-                            <div class="workday-content">
-                                <div class="form-section">
-                                    <div class="form-field">
-                                        <label class="field-label">Primary Language</label>
-                                        <div class="dropdown" id="demo3-dropdown">
-                                            <div class="dropdown-display" id="demo3-display">English (US)</div>
-                                            <div class="dropdown-menu" id="demo3-menu">
-                                                <div class="dropdown-option" data-value="en">English (US)</div>
-                                                <div class="dropdown-option selected" data-value="es" id="demo3-option">Spanish</div>
-                                                <div class="dropdown-option" data-value="fr">French</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(3, 'select', this)">SELECT</button>
-                        <button class="answer-btn" onclick="checkAnswer(3, 'click', this)">CLICK</button>
-                    </div>
-                    <div class="feedback" id="feedback3"></div>
-                </div>
-                
-                <!-- Question 4: Navigation Link -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #4</div>
-                        <div class="workday-frame">
-                            <div class="animated-cursor" id="cursor4"></div>
-                            <div class="workday-header">My Team</div>
-                            <div class="workday-content">
-                                <div class="employee-card">
-                                    <div class="employee-info">
-                                        <div class="employee-name">Sarah Chen</div>
-                                        <div class="employee-title">Senior Analyst</div>
-                                    </div>
-                                    <div class="card-actions">
-                                        <a href="#" class="action-link" id="demo4-link">View Full Profile →</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(4, 'click', this)">CLICK</button>
-                        <button class="answer-btn" onclick="checkAnswer(4, 'select', this)">SELECT</button>
-                    </div>
-                    <div class="feedback" id="feedback4"></div>
-                </div>
-                
-                <!-- Question 5: Multiple Checkboxes -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #5</div>
-                        <div class="workday-frame">
-                            <div class="animated-cursor" id="cursor5"></div>
-                            <div class="workday-header">Notification Preferences</div>
-                            <div class="workday-content">
-                                <div class="form-section">
-                                    <div class="section-title">Email Notifications</div>
-                                    <div class="checkbox-group">
-                                        <div class="checkbox-item">
-                                            <div class="checkbox" id="demo5-check"></div>
-                                            <label>Send me weekly status updates</label>
-                                        </div>
-                                        <div class="checkbox-item">
-                                            <div class="checkbox"></div>
-                                            <label>Notify me of approvals needed</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(5, 'select', this)">SELECT</button>
-                        <button class="answer-btn" onclick="checkAnswer(5, 'click', this)">CLICK</button>
-                    </div>
-                    <div class="feedback" id="feedback5"></div>
-                </div>
-                
-                <!-- Question 6: Icon Button -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #6</div>
-                        <div class="workday-frame">
-                            <div class="animated-cursor" id="cursor6"></div>
-                            <div class="workday-header">Expense Report</div>
-                            <div class="workday-content">
-                                <div class="report-row">
-                                    <span class="report-name">Q1 Travel Expenses.pdf</span>
-                                    <div class="report-actions">
-                                        <button class="icon-btn" id="demo6-icon">
-                                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                                <polyline points="7 10 12 15 17 10"></polyline>
-                                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                                            </svg>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(6, 'click', this)">CLICK</button>
-                        <button class="answer-btn" onclick="checkAnswer(6, 'select', this)">SELECT</button>
-                    </div>
-                    <div class="feedback" id="feedback6"></div>
-                </div>
-                
-                <!-- Question 7: Radio Buttons -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #7</div>
-                        <div class="workday-frame">
-                            <div class="animated-cursor" id="cursor7"></div>
-                            <div class="workday-header">Time Entry Method</div>
-                            <div class="workday-content">
-                                <div class="form-section">
-                                    <div class="section-title">Choose Your Preferred Method</div>
-                                    <div class="radio-group">
-                                        <div class="radio-item">
-                                            <div class="radio"></div>
-                                            <label>Manual Time Entry</label>
-                                        </div>
-                                        <div class="radio-item">
-                                            <div class="radio" id="demo7-radio"></div>
-                                            <label>Automated Time Tracking</label>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(7, 'select', this)">SELECT</button>
-                        <button class="answer-btn" onclick="checkAnswer(7, 'click', this)">CLICK</button>
-                    </div>
-                    <div class="feedback" id="feedback7"></div>
-                </div>
-                
-                <!-- Question 8: Close Button -->
-                <div class="practice-item">
-                    <div class="ui-demo">
-                        <div class="demo-label">Interaction Demo #8</div>
-                        <div class="workday-frame modal-demo">
-                            <div class="animated-cursor" id="cursor8"></div>
-                            <div class="modal-overlay" id="demo8-overlay"></div>
-                            <div class="modal" id="demo8-modal">
-                                <div class="modal-header">
-                                    <span>Help Documentation</span>
-                                    <button class="close-btn" id="demo8-close">✕</button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>This is additional information about the current screen.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="question">Which verb should you use in documentation?</div>
-                    <div class="answer-buttons">
-                        <button class="answer-btn" onclick="checkAnswer(8, 'click', this)">CLICK</button>
-                        <button class="answer-btn" onclick="checkAnswer(8, 'select', this)">SELECT</button>
-                    </div>
-                    <div class="feedback" id="feedback8"></div>
                 </div>
             </div>
-            
-            <div class="rule-card" style="margin-top: 40px;">
-                <h3 style="margin-bottom: 12px;">Summary: The Decision Tree</h3>
-                <div class="explanation">
-                    <ol style="margin-left: 20px; line-height: 1.8;">
-                        <li><strong>Is it a checkbox, radio button, or dropdown?</strong> → Use SELECT</li>
-                        <li><strong>Does the element visually show it's selected/chosen?</strong> → Use SELECT</li>
-                        <li><strong>Does the selection persist to the next step?</strong> → Use SELECT</li>
-                        <li><strong>Is it an action button, link, or icon?</strong> → Use CLICK</li>
-                        <li><strong>Does it immediately execute/navigate/open?</strong> → Use CLICK</li>
-                    </ol>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(3, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(3, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback3"></div>
+        </div>
+
+        <!-- Demo 4: Navigation Link -->
+        <div class="demo-section" data-demo="4">
+            <div class="demo-header">
+                <div class="demo-number">Demo 4 of 8</div>
+                <div class="demo-title">Profile Navigation</div>
+            </div>
+            <div class="demo-container" id="demo4">
+                <a href="#" class="workday-link" id="profile-link">View Your Profile</a>
+            </div>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(4, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(4, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback4"></div>
+        </div>
+
+        <!-- Demo 5: Checkbox -->
+        <div class="demo-section" data-demo="5">
+            <div class="demo-header">
+                <div class="demo-number">Demo 5 of 8</div>
+                <div class="demo-title">Communication Preferences</div>
+            </div>
+            <div class="demo-container" id="demo5">
+                <div class="workday-checkbox" id="checkbox2">
+                    <div class="checkbox-box"></div>
+                    <div class="checkbox-label">Send me weekly summary emails</div>
+                </div>
+            </div>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(5, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(5, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback5"></div>
+        </div>
+
+        <!-- Demo 6: Download Icon -->
+        <div class="demo-section" data-demo="6">
+            <div class="demo-header">
+                <div class="demo-number">Demo 6 of 8</div>
+                <div class="demo-title">Download Pay Statement</div>
+            </div>
+            <div class="demo-container" id="demo6">
+                <button class="icon-button" id="download-btn">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+                    </svg>
+                    Download PDF
+                </button>
+            </div>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(6, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(6, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback6"></div>
+        </div>
+
+        <!-- Demo 7: Radio Button -->
+        <div class="demo-section" data-demo="7">
+            <div class="demo-header">
+                <div class="demo-number">Demo 7 of 8</div>
+                <div class="demo-title">Time Entry Method</div>
+            </div>
+            <div class="demo-container" id="demo7">
+                <div class="radio-group">
+                    <div class="radio-option" data-value="manual">
+                        <div class="radio-circle"></div>
+                        <div class="checkbox-label">Manual entry</div>
+                    </div>
+                    <div class="radio-option" data-value="import">
+                        <div class="radio-circle"></div>
+                        <div class="checkbox-label">Import from timesheet</div>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(7, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(7, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback7"></div>
+        </div>
+
+        <!-- Demo 8: Modal Close Button -->
+        <div class="demo-section" data-demo="8">
+            <div class="demo-header">
+                <div class="demo-number">Demo 8 of 8</div>
+                <div class="demo-title">Dismiss Confirmation Dialog</div>
+            </div>
+            <div class="demo-container" id="demo8" style="min-height: 300px;">
+                <div class="modal-overlay" id="modal1">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <div class="modal-title">Confirmation</div>
+                            <button class="close-button" id="close-modal">×</button>
+                        </div>
+                        <p>Your changes have been saved successfully.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="quiz-buttons">
+                <button class="quiz-btn select-btn" onclick="submitAnswer(8, 'select')">SELECT</button>
+                <button class="quiz-btn click-btn" onclick="submitAnswer(8, 'click')">CLICK</button>
+            </div>
+            <div class="feedback" id="feedback8"></div>
+        </div>
+
+        <div class="decision-tree">
+            <h2>Quick Decision Tree</h2>
+            <div class="tree-container">
+                <div class="tree-node">
+                    Does the UI element change state and persist?
+                </div>
+                <div class="tree-branches">
+                    <div class="tree-branch">
+                        <div class="branch-label">YES - State persists</div>
+                        <div class="tree-result select-result">
+                            Use SELECT
+                            <div class="tree-examples">
+                                • Checkboxes<br>
+                                • Radio buttons<br>
+                                • Dropdowns<br>
+                                • Toggle switches
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tree-branch">
+                        <div class="branch-label">NO - Immediate action</div>
+                        <div class="tree-result click-result">
+                            Use CLICK
+                            <div class="tree-examples">
+                                • Buttons<br>
+                                • Links<br>
+                                • Icons<br>
+                                • Close buttons
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <script>
         let score = 0;
-        const totalQuestions = 8;
-        const answered = new Set();
-        
-        const correctAnswers = {
+        const answers = {
             1: 'select',
             2: 'click',
             3: 'select',
@@ -1261,455 +917,389 @@
             7: 'select',
             8: 'click'
         };
-        
+
         const explanations = {
             1: {
-                select: "Correct! The checkbox maintains its selected (checked) state. Users mark it and it stays checked as they proceed through enrollment.",
-                click: "Incorrect. Checkboxes show persistent selection state—they stay checked. Use SELECT for checkboxes because the state persists."
+                correct: "Correct! Checkboxes change state (checked/unchecked) and that selection persists. Users are making a choice that the system saves.",
+                incorrect: "Not quite. Checkboxes change state and persist that selection. Use SELECT because the user is choosing an option that remains."
             },
             2: {
-                click: "Correct! The Submit button performs an immediate action (submitting the timesheet). The button itself doesn't maintain a selected state—it executes a command.",
-                select: "Incorrect. Action buttons that execute commands should use CLICK. SELECT is for elements that maintain a chosen state, not buttons that perform actions."
+                correct: "Correct! Submit buttons perform immediate actions without changing a persistent UI state. They trigger a process or submission.",
+                incorrect: "Not quite. Submit buttons trigger immediate actions. Use CLICK because there's no persistent state change in the UI element itself."
             },
             3: {
-                select: "Correct! The dropdown selection persists as a setting. Notice how 'Spanish' remains selected and the change is saved to the profile.",
-                click: "Incorrect. When a dropdown selection persists as a setting (remains selected across screens), use SELECT, not CLICK."
+                correct: "Correct! Dropdowns let users select an option that persists as their choice. The selected value remains displayed.",
+                incorrect: "Not quite. Dropdowns save a user's selection. Use SELECT because the chosen option persists and represents a saved preference."
             },
             4: {
-                click: "Correct! This link performs navigation—an immediate action. Links don't maintain a selected state; they take you somewhere.",
-                select: "Incorrect. Navigation links perform immediate actions (going to another page). They don't show persistent selection, so use CLICK."
+                correct: "Correct! Navigation links perform immediate navigation actions. They don't change state—they take you somewhere.",
+                incorrect: "Not quite. Links trigger navigation without changing a persistent state. Use CLICK for navigation actions."
             },
             5: {
-                select: "Correct! The checkbox maintains its checked state as a preference setting. This selection persists, so use SELECT.",
-                click: "Incorrect. Checkboxes retain their checked/unchecked state. When an element stays selected, use SELECT."
+                correct: "Correct! This checkbox toggles a state (opted in/out) that persists. It represents a saved user preference.",
+                incorrect: "Not quite. Checkboxes represent persistent selections. Use SELECT when users are choosing an option that will be saved."
             },
             6: {
-                click: "Correct! The download icon triggers an immediate action (downloading the file). Icons that execute actions use CLICK.",
-                select: "Incorrect. Action icons that trigger downloads or other immediate tasks don't maintain selected states. Use CLICK."
+                correct: "Correct! Download icons trigger immediate actions (downloading). There's no persistent state change in the UI.",
+                incorrect: "Not quite. Download buttons/icons perform actions immediately. Use CLICK for action triggers without state persistence."
             },
             7: {
-                select: "Correct! Radio buttons show which option is selected and maintain that state. The chosen method applies to future entries, making this a clear case for SELECT.",
-                click: "Incorrect. Radio buttons maintain selection state and show which option is active. Use SELECT for radio buttons."
+                correct: "Correct! Radio buttons let users select one option from a group, and that selection persists as their choice.",
+                incorrect: "Not quite. Radio buttons save a user's selection. Use SELECT because the chosen option persists."
             },
             8: {
-                click: "Correct! The close button executes an immediate action (closing the modal). It doesn't maintain a selected state, so use CLICK.",
-                select: "Incorrect. Close/dismiss buttons perform immediate actions without maintaining state. Use CLICK for action buttons."
+                correct: "Correct! Close buttons perform immediate actions (dismissing the modal) without changing a persistent state.",
+                incorrect: "Not quite. Close buttons trigger immediate actions. Use CLICK for buttons that dismiss, close, or perform instant actions."
             }
         };
-        
-        // Animation functions for each demo
-        const animationIntervals = {};
-        
-        // Helper function to animate cursor to element
-        function animateCursorTo(cursor, element, onComplete) {
-            const elementRect = element.getBoundingClientRect();
-            const frameRect = element.closest('.workday-frame').getBoundingClientRect();
-            
-            // Start position (off-screen left)
-            cursor.style.left = (elementRect.left - frameRect.left - 100) + 'px';
-            cursor.style.top = (elementRect.top - frameRect.top + elementRect.height / 2) + 'px';
-            cursor.style.animation = 'cursorMove 1.2s ease-in-out';
+
+        // Animation functions
+        function createCursor(container) {
+            const cursor = document.createElement('div');
+            cursor.className = 'cursor';
+            cursor.innerHTML = `
+                <svg viewBox="0 0 24 24" fill="black">
+                    <path d="M7.5 2L2 21.5l7-4.5 4 6 3-2-4-6 8.5-2.5z"/>
+                </svg>
+            `;
+            container.appendChild(cursor);
+            return cursor;
+        }
+
+        function createRipple(x, y, container) {
+            const ripple = document.createElement('div');
+            ripple.className = 'ripple';
+            ripple.style.left = (x - 30) + 'px';
+            ripple.style.top = (y - 30) + 'px';
+            container.appendChild(ripple);
+            ripple.style.animation = 'ripple-effect 0.6s ease-out';
+            setTimeout(() => ripple.remove(), 600);
+        }
+
+        function animateCursorTo(cursor, startX, startY, endX, endY, duration, callback) {
+            cursor.style.left = startX + 'px';
+            cursor.style.top = startY + 'px';
             cursor.style.opacity = '1';
-            
-            setTimeout(() => {
-                // Move to element center
-                cursor.style.left = (elementRect.left - frameRect.left + elementRect.width / 2 - 5) + 'px';
-                cursor.style.top = (elementRect.top - frameRect.top + elementRect.height / 2 - 5) + 'px';
-                cursor.style.transition = 'all 0.4s ease-out';
+
+            const startTime = Date.now();
+            function animate() {
+                const elapsed = Date.now() - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = progress < 0.5 ? 2 * progress * progress : 1 - Math.pow(-2 * progress + 2, 2) / 2;
                 
-                setTimeout(() => {
-                    cursor.classList.add('clicking');
-                    if (onComplete) onComplete();
+                cursor.style.left = (startX + (endX - startX) * eased) + 'px';
+                cursor.style.top = (startY + (endY - startY) * eased) + 'px';
+
+                if (progress < 1) {
+                    requestAnimationFrame(animate);
+                } else if (callback) {
+                    callback();
+                }
+            }
+            animate();
+        }
+
+        // Demo 1: Checkbox animation
+        function animateDemo1() {
+            const container = document.getElementById('demo1');
+            const checkbox = document.getElementById('checkbox1');
+            const box = checkbox.querySelector('.checkbox-box');
+            const cursor = createCursor(container);
+
+            const rect = checkbox.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const targetX = rect.left - containerRect.left + 30;
+            const targetY = rect.top - containerRect.top + rect.height / 2;
+
+            setTimeout(() => {
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1000, () => {
+                    createRipple(targetX, targetY, container);
+                    box.classList.toggle('checked');
                     setTimeout(() => {
                         cursor.style.opacity = '0';
-                        cursor.classList.remove('clicking');
-                        cursor.style.transition = '';
-                    }, 400);
-                }, 400);
-            }, 100);
+                        setTimeout(() => {
+                            cursor.remove();
+                            setTimeout(animateDemo1, 1000);
+                        }, 300);
+                    }, 500);
+                });
+            }, 500);
         }
-        
-        const animations = {
-            1: function() {
-                const checkbox = document.getElementById('demo1-check');
-                const cursor = document.getElementById('cursor1');
-                
-                // Clear existing interval if any
-                if (animationIntervals[1]) {
-                    clearInterval(animationIntervals[1]);
-                }
-                
-                // Initial state
-                checkbox.classList.remove('checked');
-                cursor.style.opacity = '0';
-                
-                // Loop the animation
-                animationIntervals[1] = setInterval(() => {
-                    checkbox.classList.remove('checked');
-                    checkbox.style.animation = '';
-                    cursor.style.opacity = '0';
-                    cursor.classList.remove('clicking');
-                    
+
+        // Demo 2: Button animation
+        function animateDemo2() {
+            const container = document.getElementById('demo2');
+            const button = document.getElementById('submit-btn');
+            const cursor = createCursor(container);
+
+            const rect = button.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const targetX = rect.left - containerRect.left + rect.width / 2;
+            const targetY = rect.top - containerRect.top + rect.height / 2;
+
+            setTimeout(() => {
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1000, () => {
+                    createRipple(targetX, targetY, container);
+                    button.style.transform = 'scale(0.98)';
                     setTimeout(() => {
-                        // Get checkbox position
-                        const checkboxRect = checkbox.getBoundingClientRect();
-                        const frameRect = checkbox.closest('.workday-frame').getBoundingClientRect();
-                        
-                        // Position cursor off-screen initially
-                        cursor.style.left = (checkboxRect.left - frameRect.left - 100) + 'px';
-                        cursor.style.top = (checkboxRect.top - frameRect.top + 10) + 'px';
-                        
-                        // Animate cursor to checkbox
-                        cursor.style.animation = 'cursorMove 1.2s ease-in-out';
-                        cursor.style.opacity = '1';
-                        
+                        button.style.transform = 'scale(1)';
+                        cursor.style.opacity = '0';
                         setTimeout(() => {
-                            cursor.style.left = (checkboxRect.left - frameRect.left + 10) + 'px';
-                            cursor.style.top = (checkboxRect.top - frameRect.top + 10) + 'px';
-                            cursor.style.transition = 'all 0.4s ease-out';
-                            
-                            setTimeout(() => {
-                                // Click effect
-                                cursor.classList.add('clicking');
-                                checkbox.style.animation = 'checkboxCheck 0.4s ease forwards';
-                                setTimeout(() => {
-                                    checkbox.classList.add('checked');
-                                    cursor.style.opacity = '0';
-                                    cursor.style.transition = '';
-                                }, 400);
-                            }, 400);
-                        }, 100);
-                    }, 100);
-                }, 3000);
-                
-                // Run immediately first time
-                setTimeout(() => {
-                    const checkboxRect = checkbox.getBoundingClientRect();
-                    const frameRect = checkbox.closest('.workday-frame').getBoundingClientRect();
-                    
-                    cursor.style.left = (checkboxRect.left - frameRect.left - 100) + 'px';
-                    cursor.style.top = (checkboxRect.top - frameRect.top + 10) + 'px';
-                    cursor.style.animation = 'cursorMove 1.2s ease-in-out';
-                    cursor.style.opacity = '1';
-                    
+                            cursor.remove();
+                            setTimeout(animateDemo2, 1500);
+                        }, 300);
+                    }, 200);
+                });
+            }, 500);
+        }
+
+        // Demo 3: Dropdown animation
+        function animateDemo3() {
+            const container = document.getElementById('demo3');
+            const dropdown = document.getElementById('dropdown1');
+            const header = dropdown.querySelector('.dropdown-header');
+            const menu = dropdown.querySelector('.dropdown-menu');
+            const arrow = dropdown.querySelector('.dropdown-arrow');
+            const items = dropdown.querySelectorAll('.dropdown-item');
+            const cursor = createCursor(container);
+
+            const rect = header.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const targetX = rect.left - containerRect.left + rect.width / 2;
+            const targetY = rect.top - containerRect.top + rect.height / 2;
+
+            setTimeout(() => {
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1000, () => {
+                    createRipple(targetX, targetY, container);
+                    header.classList.add('open');
+                    menu.classList.add('open');
+                    arrow.classList.add('open');
+
                     setTimeout(() => {
-                        cursor.style.left = (checkboxRect.left - frameRect.left + 10) + 'px';
-                        cursor.style.top = (checkboxRect.top - frameRect.top + 10) + 'px';
-                        cursor.style.transition = 'all 0.4s ease-out';
-                        
-                        setTimeout(() => {
-                            cursor.classList.add('clicking');
-                            checkbox.style.animation = 'checkboxCheck 0.4s ease forwards';
+                        const item = items[1];
+                        const itemRect = item.getBoundingClientRect();
+                        const itemTargetX = itemRect.left - containerRect.left + itemRect.width / 2;
+                        const itemTargetY = itemRect.top - containerRect.top + itemRect.height / 2;
+
+                        animateCursorTo(cursor, targetX, targetY, itemTargetX, itemTargetY, 500, () => {
+                            createRipple(itemTargetX, itemTargetY, container);
+                            items.forEach(i => i.classList.remove('selected'));
+                            item.classList.add('selected');
+                            document.getElementById('dropdown-selected').textContent = item.textContent;
+
                             setTimeout(() => {
-                                checkbox.classList.add('checked');
+                                header.classList.remove('open');
+                                menu.classList.remove('open');
+                                arrow.classList.remove('open');
                                 cursor.style.opacity = '0';
-                                cursor.style.transition = '';
-                            }, 400);
-                        }, 400);
-                    }, 100);
-                }, 500);
-            },
-            2: function() {
-                const button = document.getElementById('demo2-btn');
-                const cursor = document.getElementById('cursor2');
-                
-                if (animationIntervals[2]) {
-                    clearInterval(animationIntervals[2]);
-                }
-                
-                button.classList.remove('clicked');
-                cursor.style.opacity = '0';
-                
-                animationIntervals[2] = setInterval(() => {
-                    button.classList.remove('clicked');
-                    button.style.animation = '';
-                    cursor.style.opacity = '0';
-                    cursor.classList.remove('clicking');
-                    
-                    setTimeout(() => {
-                        const buttonRect = button.getBoundingClientRect();
-                        const frameRect = button.closest('.workday-frame').getBoundingClientRect();
-                        
-                        cursor.style.left = (buttonRect.left - frameRect.left - 100) + 'px';
-                        cursor.style.top = (buttonRect.top - frameRect.top + buttonRect.height / 2) + 'px';
-                        cursor.style.animation = 'cursorMove 1.2s ease-in-out';
-                        cursor.style.opacity = '1';
-                        
-                        setTimeout(() => {
-                            cursor.style.left = (buttonRect.left - frameRect.left + buttonRect.width / 2) + 'px';
-                            cursor.style.top = (buttonRect.top - frameRect.top + buttonRect.height / 2) + 'px';
-                            cursor.style.transition = 'all 0.4s ease-out';
-                            
-                            setTimeout(() => {
-                                cursor.classList.add('clicking');
-                                button.style.animation = 'buttonClick 0.3s ease';
-                                button.classList.add('clicked');
                                 setTimeout(() => {
-                                    button.classList.remove('clicked');
-                                    button.style.animation = '';
-                                    cursor.style.opacity = '0';
-                                    cursor.style.transition = '';
-                                }, 300);
-                            }, 400);
-                        }, 100);
-                    }, 100);
-                }, 3000);
-                
-                setTimeout(() => {
-                    const buttonRect = button.getBoundingClientRect();
-                    const frameRect = button.closest('.workday-frame').getBoundingClientRect();
-                    
-                    cursor.style.left = (buttonRect.left - frameRect.left - 100) + 'px';
-                    cursor.style.top = (buttonRect.top - frameRect.top + buttonRect.height / 2) + 'px';
-                    cursor.style.animation = 'cursorMove 1.2s ease-in-out';
-                    cursor.style.opacity = '1';
-                    
-                    setTimeout(() => {
-                        cursor.style.left = (buttonRect.left - frameRect.left + buttonRect.width / 2) + 'px';
-                        cursor.style.top = (buttonRect.top - frameRect.top + buttonRect.height / 2) + 'px';
-                        cursor.style.transition = 'all 0.4s ease-out';
-                        
-                        setTimeout(() => {
-                            cursor.classList.add('clicking');
-                            button.style.animation = 'buttonClick 0.3s ease';
-                            button.classList.add('clicked');
-                            setTimeout(() => {
-                                button.classList.remove('clicked');
-                                button.style.animation = '';
-                                cursor.style.opacity = '0';
-                                cursor.style.transition = '';
-                            }, 300);
-                        }, 400);
-                    }, 100);
-                }, 500);
-            },
-            3: function() {
-                const menu = document.getElementById('demo3-menu');
-                const display = document.getElementById('demo3-display');
-                const option = document.getElementById('demo3-option');
-                const cursor = document.getElementById('cursor3');
-                
-                if (animationIntervals[3]) clearInterval(animationIntervals[3]);
-                
-                const runAnimation = () => {
-                    display.textContent = 'English (US)';
-                    menu.classList.remove('open');
-                    option.style.background = '';
-                    cursor.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        animateCursorTo(cursor, display, () => {
-                            menu.classList.add('open');
-                            setTimeout(() => {
-                                animateCursorTo(cursor, option, () => {
-                                    option.style.background = 'rgba(74, 144, 164, 0.2)';
+                                    cursor.remove();
                                     setTimeout(() => {
-                                        menu.classList.remove('open');
-                                        display.textContent = 'Spanish';
-                                        option.style.background = '';
+                                        items.forEach(i => i.classList.remove('selected'));
+                                        items[0].classList.add('selected');
+                                        document.getElementById('dropdown-selected').textContent = 'English (US)';
+                                        setTimeout(animateDemo3, 1000);
                                     }, 500);
-                                });
-                            }, 600);
+                                }, 300);
+                            }, 800);
                         });
-                    }, 100);
-                };
-                
-                animationIntervals[3] = setInterval(runAnimation, 4500);
-                setTimeout(runAnimation, 500);
-            },
-            4: function() {
-                const link = document.getElementById('demo4-link');
-                const cursor = document.getElementById('cursor4');
-                
-                if (animationIntervals[4]) clearInterval(animationIntervals[4]);
-                
-                animationIntervals[4] = setInterval(() => {
-                    link.classList.remove('clicked');
-                    cursor.style.opacity = '0';
-                    
+                    }, 1000);
+                });
+            }, 500);
+        }
+
+        // Demo 4: Link animation
+        function animateDemo4() {
+            const container = document.getElementById('demo4');
+            const link = document.getElementById('profile-link');
+            const cursor = createCursor(container);
+
+            const rect = link.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const targetX = rect.left - containerRect.left + rect.width / 2;
+            const targetY = rect.top - containerRect.top + rect.height / 2;
+
+            setTimeout(() => {
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1000, () => {
+                    createRipple(targetX, targetY, container);
                     setTimeout(() => {
-                        animateCursorTo(cursor, link, () => {
-                            link.classList.add('clicked');
+                        cursor.style.opacity = '0';
+                        setTimeout(() => {
+                            cursor.remove();
+                            setTimeout(animateDemo4, 1500);
+                        }, 300);
+                    }, 500);
+                });
+            }, 500);
+        }
+
+        // Demo 5: Checkbox animation (similar to demo 1)
+        function animateDemo5() {
+            const container = document.getElementById('demo5');
+            const checkbox = document.getElementById('checkbox2');
+            const box = checkbox.querySelector('.checkbox-box');
+            const cursor = createCursor(container);
+
+            const rect = checkbox.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const targetX = rect.left - containerRect.left + 30;
+            const targetY = rect.top - containerRect.top + rect.height / 2;
+
+            setTimeout(() => {
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1000, () => {
+                    createRipple(targetX, targetY, container);
+                    box.classList.toggle('checked');
+                    setTimeout(() => {
+                        cursor.style.opacity = '0';
+                        setTimeout(() => {
+                            cursor.remove();
+                            setTimeout(animateDemo5, 1000);
+                        }, 300);
+                    }, 500);
+                });
+            }, 500);
+        }
+
+        // Demo 6: Icon button animation
+        function animateDemo6() {
+            const container = document.getElementById('demo6');
+            const button = document.getElementById('download-btn');
+            const cursor = createCursor(container);
+
+            const rect = button.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const targetX = rect.left - containerRect.left + rect.width / 2;
+            const targetY = rect.top - containerRect.top + rect.height / 2;
+
+            setTimeout(() => {
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1000, () => {
+                    createRipple(targetX, targetY, container);
+                    setTimeout(() => {
+                        cursor.style.opacity = '0';
+                        setTimeout(() => {
+                            cursor.remove();
+                            setTimeout(animateDemo6, 1500);
+                        }, 300);
+                    }, 500);
+                });
+            }, 500);
+        }
+
+        // Demo 7: Radio button animation
+        function animateDemo7() {
+            const container = document.getElementById('demo7');
+            const options = container.querySelectorAll('.radio-option');
+            const cursor = createCursor(container);
+
+            const option = options[1];
+            const rect = option.getBoundingClientRect();
+            const containerRect = container.getBoundingClientRect();
+            const targetX = rect.left - containerRect.left + 30;
+            const targetY = rect.top - containerRect.top + rect.height / 2;
+
+            setTimeout(() => {
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1000, () => {
+                    createRipple(targetX, targetY, container);
+                    options.forEach(opt => {
+                        opt.querySelector('.radio-circle').classList.remove('selected');
+                    });
+                    option.querySelector('.radio-circle').classList.add('selected');
+
+                    setTimeout(() => {
+                        cursor.style.opacity = '0';
+                        setTimeout(() => {
+                            cursor.remove();
                             setTimeout(() => {
-                                link.classList.remove('clicked');
-                            }, 300);
-                        });
-                    }, 100);
-                }, 3000);
-                
-                setTimeout(() => {
-                    animateCursorTo(cursor, link, () => {
-                        link.classList.add('clicked');
-                        setTimeout(() => link.classList.remove('clicked'), 300);
-                    });
-                }, 500);
-            },
-            5: function() {
-                const checkbox = document.getElementById('demo5-check');
-                const cursor = document.getElementById('cursor5');
-                
-                if (animationIntervals[5]) clearInterval(animationIntervals[5]);
-                
-                animationIntervals[5] = setInterval(() => {
-                    checkbox.classList.remove('checked');
-                    checkbox.style.animation = '';
-                    cursor.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        animateCursorTo(cursor, checkbox, () => {
-                            checkbox.style.animation = 'checkboxCheck 0.4s ease forwards';
-                            setTimeout(() => checkbox.classList.add('checked'), 400);
-                        });
-                    }, 100);
-                }, 3000);
-                
-                setTimeout(() => {
-                    animateCursorTo(cursor, checkbox, () => {
-                        checkbox.style.animation = 'checkboxCheck 0.4s ease forwards';
-                        setTimeout(() => checkbox.classList.add('checked'), 400);
-                    });
-                }, 500);
-            },
-            6: function() {
-                const icon = document.getElementById('demo6-icon');
-                const cursor = document.getElementById('cursor6');
-                
-                if (animationIntervals[6]) clearInterval(animationIntervals[6]);
-                
-                animationIntervals[6] = setInterval(() => {
-                    icon.classList.remove('clicked');
-                    cursor.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        animateCursorTo(cursor, icon, () => {
-                            icon.classList.add('clicked');
-                            setTimeout(() => icon.classList.remove('clicked'), 600);
-                        });
-                    }, 100);
-                }, 3000);
-                
-                setTimeout(() => {
-                    animateCursorTo(cursor, icon, () => {
-                        icon.classList.add('clicked');
-                        setTimeout(() => icon.classList.remove('clicked'), 600);
-                    });
-                }, 500);
-            },
-            7: function() {
-                const radio = document.getElementById('demo7-radio');
-                const cursor = document.getElementById('cursor7');
-                
-                if (animationIntervals[7]) clearInterval(animationIntervals[7]);
-                
-                animationIntervals[7] = setInterval(() => {
-                    radio.classList.remove('selected');
-                    radio.style.animation = '';
-                    cursor.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        animateCursorTo(cursor, radio, () => {
-                            radio.style.animation = 'radioSelect 0.4s ease forwards';
-                            setTimeout(() => radio.classList.add('selected'), 400);
-                        });
-                    }, 100);
-                }, 3000);
-                
-                setTimeout(() => {
-                    animateCursorTo(cursor, radio, () => {
-                        radio.style.animation = 'radioSelect 0.4s ease forwards';
-                        setTimeout(() => radio.classList.add('selected'), 400);
-                    });
-                }, 500);
-            },
-            8: function() {
-                const overlay = document.getElementById('demo8-overlay');
-                const modal = document.getElementById('demo8-modal');
-                const closeBtn = document.getElementById('demo8-close');
-                const cursor = document.getElementById('cursor8');
-                
-                if (animationIntervals[8]) clearInterval(animationIntervals[8]);
-                
-                const runAnimation = () => {
-                    overlay.classList.remove('hiding');
-                    modal.classList.remove('hiding');
-                    closeBtn.classList.remove('clicked');
-                    cursor.style.opacity = '0';
-                    
-                    setTimeout(() => {
-                        animateCursorTo(cursor, closeBtn, () => {
-                            closeBtn.classList.add('clicked');
-                            overlay.classList.add('hiding');
-                            modal.classList.add('hiding');
-                            setTimeout(() => closeBtn.classList.remove('clicked'), 300);
-                        });
+                                options.forEach(opt => {
+                                    opt.querySelector('.radio-circle').classList.remove('selected');
+                                });
+                                setTimeout(animateDemo7, 1000);
+                            }, 500);
+                        }, 300);
                     }, 800);
-                };
-                
-                animationIntervals[8] = setInterval(runAnimation, 4000);
-                setTimeout(runAnimation, 800);
-            }
-        };
-        
-        // Auto-play animations on page load
-        function initAnimations() {
-            Object.keys(animations).forEach(key => {
-                setTimeout(() => {
-                    animations[key]();
-                }, parseInt(key) * 200);
-            });
+                });
+            }, 500);
         }
-        
-        function checkAnswer(questionNum, answer, button) {
-            // Prevent re-answering
-            if (answered.has(questionNum)) {
-                return;
-            }
-            
-            answered.add(questionNum);
-            const isCorrect = answer === correctAnswers[questionNum];
-            
-            // Mark the button
-            if (isCorrect) {
-                button.classList.add('correct');
-                score++;
-            } else {
-                button.classList.add('incorrect');
-            }
-            
-            // Disable all buttons for this question
-            const allButtons = button.parentElement.querySelectorAll('.answer-btn');
-            allButtons.forEach(btn => {
-                btn.style.cursor = 'not-allowed';
-                btn.style.opacity = '0.7';
-                btn.onclick = null;
-            });
-            
-            // Show feedback
-            const feedback = document.getElementById(`feedback${questionNum}`);
-            feedback.textContent = explanations[questionNum][answer];
-            feedback.classList.add('show');
-            feedback.classList.add(isCorrect ? 'correct' : 'incorrect');
-            
+
+        // Demo 8: Modal close animation
+        function animateDemo8() {
+            const container = document.getElementById('demo8');
+            const modal = document.getElementById('modal1');
+            const closeBtn = document.getElementById('close-modal');
+            const cursor = createCursor(container);
+
+            // Show modal first
+            modal.classList.add('show');
+
+            setTimeout(() => {
+                const rect = closeBtn.getBoundingClientRect();
+                const containerRect = container.getBoundingClientRect();
+                const targetX = rect.left - containerRect.left + rect.width / 2;
+                const targetY = rect.top - containerRect.top + rect.height / 2;
+
+                animateCursorTo(cursor, 20, 20, targetX, targetY, 1200, () => {
+                    createRipple(targetX, targetY, container);
+                    setTimeout(() => {
+                        modal.classList.remove('show');
+                        cursor.style.opacity = '0';
+                        setTimeout(() => {
+                            cursor.remove();
+                            setTimeout(animateDemo8, 2000);
+                        }, 300);
+                    }, 300);
+                });
+            }, 1000);
+        }
+
+        // Start all animations
+        setTimeout(() => {
+            animateDemo1();
+            animateDemo2();
+            animateDemo3();
+            animateDemo4();
+            animateDemo5();
+            animateDemo6();
+            animateDemo7();
+            animateDemo8();
+        }, 500);
+
+        // Quiz functionality
+        function submitAnswer(demoNum, userAnswer) {
+            const correctAnswer = answers[demoNum];
+            const isCorrect = userAnswer === correctAnswer;
+            const feedback = document.getElementById(`feedback${demoNum}`);
+            const buttons = document.querySelectorAll(`[data-demo="${demoNum}"] .quiz-btn`);
+
+            // Disable buttons
+            buttons.forEach(btn => btn.disabled = true);
+
             // Update score
-            updateScore();
-        }
-        
-        function updateScore() {
-            document.getElementById('correctCount').textContent = score;
-            
-            // Scroll score into view if on mobile
-            if (window.innerWidth < 768 && answered.size === totalQuestions) {
-                document.querySelector('.score-display').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            if (isCorrect) {
+                score++;
+                document.getElementById('score').textContent = score;
             }
+
+            // Show feedback
+            feedback.className = `feedback show ${isCorrect ? 'correct' : 'incorrect'}`;
+            feedback.innerHTML = `
+                <strong>${isCorrect ? '✓ Correct!' : '✗ Incorrect'}</strong>
+                ${isCorrect ? explanations[demoNum].correct : explanations[demoNum].incorrect}
+            `;
+
+            // Scroll to next demo after delay
+            setTimeout(() => {
+                if (demoNum < 8) {
+                    const nextDemo = document.querySelector(`[data-demo="${demoNum + 1}"]`);
+                    nextDemo.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                } else {
+                    const decisionTree = document.querySelector('.decision-tree');
+                    decisionTree.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }, 2000);
         }
-        
-        // Initialize
-        document.getElementById('totalCount').textContent = totalQuestions;
-        
-        // Start animations after page loads
-        window.addEventListener('load', function() {
-            setTimeout(initAnimations, 500);
-        });
+
+        // Prevent default link behavior
+        document.getElementById('profile-link').addEventListener('click', (e) => e.preventDefault());
     </script>
 </body>
 </html>
