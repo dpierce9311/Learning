@@ -1083,7 +1083,7 @@
                 <div class="example-box">
                     <div class="example-label">✓ CORRECT EXAMPLE</div>
                     <div class="overview-example">
-                        <p><span class="tooltip-word">This guide covers<span class="tooltip">✨ Every guide must begin with this phrase (for multi-process guides, add "business processes related to"). This creates consistency and immediately tells users what to expect.</span></span> <span class="tooltip-word"> business processes related to position management in Workday. Position Management is a staffing model used to manage positions within supervisory organizations, allowing for hiring or job changes of employees into open positions<span class="tooltip">📝 This is the unifying theme - a 1-2 sentence summary that explains what all these processes have in common. It provides context before diving into specifics.</span></span><span class="tooltip-word">:<span class="tooltip">⚠️ This colon is critical! It introduces the bulleted list of business processes. Never forget the colon when leading into a list.</span></span></p>
+                        <p><span class="tooltip-word">This guide covers<span class="tooltip">✨ Every guide must begin with this phrase (for multi-process guides, add "business processes related to"). This creates consistency and immediately tells users what to expect.</span></span> <span class="tooltip-word"> business processes related to Position Management, a staffing model used to manage positions within supervisory organizations, which allows for hiring or job changes of employees into open positions<span class="tooltip">📝 This is the unifying theme - a 1-2 sentence summary that explains what all these processes have in common. It provides context before diving into specifics.</span></span><span class="tooltip-word">:<span class="tooltip">⚠️ This colon is critical! It introduces the bulleted list of business processes. Never forget the colon when leading into a list.</span></span></p>
                         <ul>
                             <li><strong>Create Position</strong><span class="tooltip-word">:<span class="tooltip">🔍 Notice: The colon comes AFTER the bold business process name but is NOT bolded itself. This is the standard format.</span></span> <span class="tooltip-word">Opens<span class="tooltip">💡 We've been beginning most BP overviews with "used to" but this can often be phrased more directly by starting with the action verb. "Opens" is clearer and more direct than "Used to open."</span></span> a new position and defines key attributes, including job details, location, and hiring availability.</li>
                             <li><strong>Edit Position Restrictions</strong>: <span class="tooltip-word">Updates<span class="tooltip">✅ Another strong action verb! Starting directly with "Updates" is more dynamic and clear than "Used to update." Choose verbs that clearly convey what the process accomplishes.</span></span> a filled or unfilled position's details, including job profile, location, worker type, and job description.</li>
@@ -1224,14 +1224,14 @@
                     <p style="margin-left: 20px; margin-top: 10px;">If a step must be completed <strong>when certain criteria are met</strong>, it is <strong>conditional, not optional</strong>. Don't label it as optional.</p>
                     
                     <div style="margin-top: 20px; margin-left: 20px;">
-                        <p style="font-weight: 600; margin-bottom: 10px;">Instead, use these phrases:</p>
-                        <ul style="margin-left: 40px;">
-                            <li><strong>"as needed"</strong> - when the user decides if it's necessary</li>
-                            <li><strong>"as applicable"</strong> - when specific conditions determine necessity</li>
-                            <li><strong>"if applicable"</strong> - when conditions may or may not apply</li>
-                            <li><strong>Summary of criteria</strong> - explicitly state when the step is required</li>
-                        </ul>
-                    </div>
+    <p style="font-weight: 600; margin-bottom: 10px;">Instead, use these phrases:</p>
+    <ul style="margin-left: 40px;">
+        <li>"as needed"</li>
+        <li>"as applicable"</li>
+        <li>"if applicable"</li>
+        <li>A summary of the criteria that makes it necessary</li>
+    </ul>
+</div>
                     
                     <p style="margin-left: 20px; margin-top: 15px; color: #475569; line-height: 1.8;">
                         For example, completing a costing questionnaire for positions requiring funding outside defaults is conditional—it's required when that specific funding scenario exists, not truly optional for all users.
@@ -1258,12 +1258,12 @@
                     
                     <div style="margin-bottom: 25px;">
                         <h4 style="color: #059669; margin-bottom: 10px;">✅ Conditional Steps (Correct)</h4>
-                        <div class="code-block">5. Select <strong> Performance Calibration </strong> as the Calibration Program if performance calibration is required.<br><br>6. Enter <strong>Termination Details</strong> if applicable.<br><br>7. Enter <strong>Approvals </strong> as needed.<br><br>8.Enter <strong>State-Specific Tax Information</strong> if the worker is located in California. .</div>
+                        <div class="code-block">5. Select <strong> Performance Calibration </strong> as the Calibration Program if performance calibration is required.<br><br>6. Enter <strong>Termination Details</strong> if applicable.<br><br>7. Enter <strong>Approvals </strong> as needed.<br><br>8.Enter <strong>State-Specific Tax Information</strong> if the worker is located in California.</div>
                     </div>
 
                     <div>
                         <h4 style="color: #059669; margin-bottom: 10px;">✅ Truly Optional Steps (Correct)</h4>
-                        <div class="code-block">17. <em>Optional:</em> Select <strong>Available for Overlap</strong>.<br><br>22. <em>Optional:</em> Enter <strong>Notes </strong> visible to approvers.<br><br>9. <em>Optional:</em> Click <strong> Add </strong> to attach additional supporting documentation.</div>
+                        <div class="code-block">17. Select <strong>Available for Overlap</strong> if applicable.<br><br>22. <em>Optional:</em> Enter <strong>Notes </strong> visible to approvers.<br><br>9. <em>Optional:</em> Click <strong> Add </strong> to attach additional supporting documentation.</div>
                     </div>
                 </div>
 
@@ -1298,126 +1298,131 @@
 
             <div class="visual-divider"></div>
 
-            <!-- Section 4: Bullets vs Substeps -->
-            <section id="bullets">
-                <h2><span class="section-number">4</span> Bullets vs. Substeps</h2>
-                
-                <div class="intro-text">
-                    <strong>Bullets and substeps serve different purposes.</strong> Understanding when to use each helps create clear, accurate documentation.
+           <!-- Section 4: Bullets vs Substeps -->
+<section id="bullets">
+    <h2><span class="section-number">4</span> Bullets vs. Substeps</h2>
+    
+    <div class="intro-text">
+        <strong>Bullets and substeps serve different purposes.</strong> Understanding when to use each ensures your documentation accurately reflects whether actions are required together or can be completed independently.
+    </div>
+
+    <div class="key-concept">
+        <h4><span class="key-concept-icon">•</span> When to Use BULLETS</h4>
+        <p style="margin-left: 20px; margin-top: 10px;">Bullets are used in two specific situations:</p>
+        <ol style="margin-left: 40px; margin-top: 15px; line-height: 1.8;">
+            <li><strong>To indicate items that can be completed as needed</strong> - The user might complete one item, several items, all items, or none, depending on their specific scenario. These are not sequential steps that must all be done together. Use clarifying language like "as applicable," "as needed," "for example," or "if needed" to signal this flexibility.</li>
+            <li><strong>To provide examples</strong> of possible selections, inputs, or options available to users</li>
+        </ol>
+    </div>
+
+    <div class="example-box">
+        <div class="example-label">✓ Bullets for Items Completed As Needed</div>
+        <div class="code-block">8. Complete the following fields as applicable:<br>   • <strong>Last Day of Work</strong><br>   • <strong>Comment to Approver</strong><br>   • <strong>Attachments</strong></div>
+        <p style="margin-top: 15px; color: #475569;">
+            <strong>Why bullets?</strong> The user might need to complete one, two, or all three of these fields depending on their situation. They're not sequential steps—they're independent options. The phrase "as applicable" signals this flexibility.
+        </p>
+    </div>
+
+    <div class="example-box">
+        <div class="example-label">✓ Bullets for Providing Examples</div>
+        <div class="code-block">7. Edit fields under Job Details, for example:<br>   • <strong>Employee Type</strong><br>   • <strong>Job Profile</strong><br>   • <strong>Time Type</strong><br>   • <strong>Location</strong></div>
+        <p style="margin-top: 15px; color: #475569;">
+            <strong>Why bullets?</strong> These are examples of fields available under Job Details, not a complete required list. The phrase "for example" indicates these are illustrative options.
+        </p>
+    </div>
+
+    <div class="key-concept" style="background: #dbeafe; border-left-color: #3b82f6;">
+        <h4><span class="key-concept-icon" style="background: #3b82f6;">a)</span> When to Use SUBSTEPS (a, b, c)</h4>
+        <p style="margin-left: 20px; margin-top: 10px;">Substeps are for actions that <strong>must all be completed together</strong> when the user engages with that step. Although the parent step itself can be optional or conditional, once the user begins that step, all substeps are required.</p>
+        
+        <p style="margin-left: 20px; margin-top: 15px; font-weight: 600;">Two common scenarios:</p>
+        <ol style="margin-left: 40px; margin-top: 10px; line-height: 1.8;">
+            <li><strong>Section/location requirement</strong> - "Under [section/tab], complete ALL of the following:" All actions within that context are required.</li>
+            <li><strong>Conditional requirement</strong> - "If [condition is true], do ALL of the following:" When the condition is met, all substeps must be completed.</li>
+        </ol>
+
+        <p style="margin-left: 20px; margin-top: 15px; font-weight: 600;">Substeps can be formatted two ways:</p>
+        <ul style="margin-left: 40px; margin-top: 10px;">
+            <li><strong>Simple list:</strong> Just list the field names</li>
+            <li><strong>Full sentences:</strong> Write complete action statements</li>
+        </ul>
+        <p style="margin-left: 20px; margin-top: 10px; color: #1e40af; background: #dbeafe; padding: 10px; border-radius: 0;">
+            <strong>Key Rule:</strong> Bold the element that receives interaction, whether it's a simple list or full sentences.
+        </p>
+    </div>
+
+    <div class="example-box">
+        <div class="example-label">✓ Substeps - Complete All in Section</div>
+        <div class="code-block">8. Edit the fields under Legal Name Information:<br>   a. <strong>Country</strong><br>   b. <strong>First Name</strong><br>   c. <strong>Last Name</strong></div>
+        <p style="margin-top: 15px; color: #475569;">
+            <strong>Why substeps?</strong> When editing Legal Name Information, all three fields must be completed. These are required actions within that section, done together.
+        </p>
+    </div>
+
+    <div class="example-box">
+        <div class="example-label">✓ Substeps - Conditional (All Required If Condition Met)</div>
+        <div class="code-block">5. Complete the following fields if a document is attached:<br>   a. Enter a <strong>Document Type</strong>.<br>   b. Select a <strong>Category</strong>.<br>   c. Click <strong>Upload</strong>.</div>
+        <p style="margin-top: 15px; color: #475569;">
+            <strong>Why substeps?</strong> Although the parent step is conditional (IF a document is attached), once the user attaches a document, then ALL three substeps (a, b, c) must be completed in sequence. This is conditional, but once engaged, all actions are required.
+        </p>
+    </div>
+
+    <div class="comparison-container">
+        <div class="comparison-box" style="background: #fef3c7; border-color: #f59e0b;">
+            <h4><span class="icon">•</span> Bullets = Selective/As Needed</h4>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Might not all need to be done</li>
+                <li>Complete as applicable</li>
+                <li>Independent, non-sequential</li>
+                <li>Often preceded by "as applicable," "as needed," "for example"</li>
+            </ul>
+        </div>
+        <div class="comparison-box" style="background: #dbeafe; border-color: #3b82f6;">
+            <h4><span class="icon">a)</span> Substeps = All Required Together</h4>
+            <ul style="margin-left: 20px; margin-top: 10px;">
+                <li>Must all be completed when engaged</li>
+                <li>Sequential sub-actions</li>
+                <li>Required within their context</li>
+                <li>Part of a broader step</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Drag and Drop Exercise -->
+    <div class="drag-drop-container">
+        <div class="drag-instruction">
+            <h4>🎯 Interactive Exercise: Sort the Examples</h4>
+            <p>Drag each card to either "Correct" or "Incorrect" formatting. You'll get immediate feedback on each choice!</p>
+        </div>
+
+        <div class="sorting-game">
+            <div class="score-counter">
+                <span id="sortScore">0</span> / 5 Correct
+            </div>
+
+            <div class="current-card-area" id="cardArea">
+                <!-- Cards will appear here one at a time -->
+            </div>
+
+            <div class="drop-zones">
+                <div class="drop-zone correct-zone" id="correctZone" data-zone="correct">
+                    <h3>✓ Correct</h3>
+                    <div class="sorting-feedback" id="correctFeedback"></div>
                 </div>
-
-                <div class="key-concept">
-                    <h4><span class="key-concept-icon">•</span> When to Use BULLETS</h4>
-                    <p style="margin-left: 20px; margin-top: 10px;">Bullets are used in two specific situations:</p>
-                    <ol style="margin-left: 40px; margin-top: 15px; line-height: 1.8;">
-                        <li><strong>To provide examples</strong> of possible selections or entries</li>
-                        <li><strong>To indicate steps that don't explicitly need to be done</strong> (conditional sub-actions)</li>
-                    </ol>
+                <div class="drop-zone incorrect-zone" id="incorrectZone" data-zone="incorrect">
+                    <h3>✗ Incorrect</h3>
+                    <div class="sorting-feedback" id="incorrectFeedback"></div>
                 </div>
+            </div>
 
-                <div class="example-box">
-                    <div class="example-label">✓ Bullets for Conditional Sub-Actions</div>
-                    <div class="code-block">1. If performance calibration is required, select Performance Calibration as the Calibration Program. If Run Once in Future is selected:<br>   • Enter <strong>Start Date</strong>.<br>   • Enter <strong>Start Time</strong>.<br>   • Verify <strong>Time Zone</strong>.</div>
-                    <p style="margin-top: 15px; color: #475569;">
-                        <strong>Why bullets?</strong> These sub-actions only happen IF "Run Once in Future" is selected. They're conditional, so bullets indicate they might not need to be completed. Note: Field names are still bolded because they might receive interaction.
-                    </p>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-label">✓ Bullets for Examples</div>
-                    <div class="code-block">19. <em>Optional:</em> Click the (+) for additional position qualifications:<br>   • Skills<br>   • Education<br>   • Languages<br>   • Certifications<br>   • Work Experience</div>
-                    <p style="margin-top: 15px; color: #475569;">
-                        <strong>Why bullets?</strong> These are examples of available options. The user might select one, some, all, or none.
-                    </p>
-                </div>
-
-                <div class="key-concept" style="background: #dbeafe; border-left-color: #3b82f6;">
-                    <h4><span class="key-concept-icon" style="background: #3b82f6;">a)</span> When to Use SUBSTEPS (a, b, c)</h4>
-                    <p style="margin-left: 20px; margin-top: 10px;">Substeps are for actions that <strong>must be completed</strong> as part of a broader step. They're not conditional—they're required sub-actions.</p>
-                    <p style="margin-left: 20px; margin-top: 10px; font-weight: 600;">Substeps can be formatted two ways:</p>
-                    <ul style="margin-left: 40px; margin-top: 10px;">
-                        <li><strong>Simple list:</strong> Just list the field names</li>
-                        <li><strong>Full sentences:</strong> Write complete action statements</li>
-                    </ul>
-                    <p style="margin-left: 20px; margin-top: 10px; color: #1e40af; background: #dbeafe; padding: 10px; border-radius: 0;">
-                        <strong>Key Rule:</strong> Bold the element that receives interaction, whether it's a simple list or full sentences.
-                    </p>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-label">✓ Substeps - Simple List Format</div>
-                    <div class="code-block">2. Enter information under the Invoice Details section for the following fields:<br>   a. <strong>Invoice Date</strong><br>   b. <strong>Invoice Number</strong><br>   c. <strong>Invoice Amount</strong><br>   d. <strong>Payment Terms</strong><br>   e. <strong>Remit-To Address</strong></div>
-                    <p style="margin-top: 15px; color: #475569;">
-                        <strong>Why substeps?</strong> These are required fields that must be filled out. Substeps indicate mandatory actions.
-                    </p>
-                </div>
-
-                <div class="example-box">
-                    <div class="example-label">✓ Substeps - Full Sentence Format</div>
-                    <div class="code-block">5. Complete fields under the Contract Information section:<br>   a. Enter <strong>Contract Start Date</strong>.<br>   b. Enter <strong>Contract End Date</strong>.<br>   c. Select <strong>Contract Type</strong>.<br>   d. Enter <strong>Total Contract Value</strong>.</div>
-                    <p style="margin-top: 15px; color: #475569;">
-                        <strong>Why substeps?</strong> Same required actions, but written as complete action statements. Both formats work—choose based on context and clarity.
-                    </p>
-                </div>
-
-                <div class="comparison-container">
-                    <div class="comparison-box" style="background: #fef3c7; border-color: #f59e0b;">
-                        <h4><span class="icon">•</span> Bullets = Conditional/Examples</h4>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>Might not need to be done</li>
-                            <li>Depends on user choices</li>
-                            <li>Shows available options</li>
-                            <li>Examples of possibilities</li>
-                        </ul>
-                    </div>
-                    <div class="comparison-box" style="background: #dbeafe; border-color: #3b82f6;">
-                        <h4><span class="icon">a)</span> Substeps = Required Actions</h4>
-                        <ul style="margin-left: 20px; margin-top: 10px;">
-                            <li>Must be completed</li>
-                            <li>Part of broader step</li>
-                            <li>Required fields/actions</li>
-                            <li>Sequential sub-tasks</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Improved Drag and Drop Exercise -->
-                <div class="drag-drop-container">
-                    <div class="drag-instruction">
-                        <h4>🎯 Interactive Exercise: Sort the Examples</h4>
-                        <p>Drag each card to either "Correct" or "Incorrect" formatting. You'll get immediate feedback on each choice!</p>
-                    </div>
-
-                    <div class="sorting-game">
-                        <div class="score-counter">
-                            <span id="sortScore">0</span> / 5 Correct
-                        </div>
-
-                        <div class="current-card-area" id="cardArea">
-                            <!-- Cards will appear here one at a time -->
-                        </div>
-
-                        <div class="drop-zones">
-                            <div class="drop-zone correct-zone" id="correctZone" data-zone="correct">
-                                <h3>✓ Correct</h3>
-                                <div class="sorting-feedback" id="correctFeedback"></div>
-                            </div>
-                            <div class="drop-zone incorrect-zone" id="incorrectZone" data-zone="incorrect">
-                                <h3>✗ Incorrect</h3>
-                                <div class="sorting-feedback" id="incorrectFeedback"></div>
-                            </div>
-                        </div>
-
-                        <div class="final-score" id="finalScore">
-                            <h3>Great job!</h3>
-                            <p id="finalScoreText"></p>
-                            <button class="reset-btn" onclick="resetSortingGame()">Try Again</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="visual-divider"></div>
+            <div class="final-score" id="finalScore">
+                <h3>Great job!</h3>
+                <p id="finalScoreText"></p>
+                <button class="reset-btn" onclick="resetSortingGame()">Try Again</button>
+            </div>
+        </div>
+    </div>
+</section>
 
             <!-- Section 5: Bolding Rules -->
             <section id="bolding">
@@ -1436,11 +1441,10 @@
                     <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.8;">
                         <li><strong>Field names</strong> when users click into them to enter data</li>
                         <li><strong>Buttons</strong> when users click them</li>
-                        <li><strong>Checkboxes</strong> when users check/uncheck them</li>
+                        <li><strong>Checkboxes</strong> when users select/clear them</li>
                         <li><strong>Menu items</strong> when users select them</li>
                         <li><strong>Tabs</strong> when users click to navigate to them</li>
-                        <li><strong>Business process names</strong> when users search for and select them</li>
-                    </ul>
+                       </ul>
                 </div>
 
                 <div class="key-concept" style="background: #fee2e2; border-left-color: #dc2626;">
@@ -1451,7 +1455,6 @@
                         <li><strong>✗ Headers</strong> mentioned for reference</li>
                         <li><strong>✗ Tab names</strong> mentioned in context (only bold when user selects)</li>
                         <li><strong>✗ Page names</strong> (write in lowercase, no bold)</li>
-                        <li><strong>✗ Colons</strong> after bolded elements</li>
                         <li><strong>✗ Punctuation</strong> at the end of bolded text</li>
                     </ul>
                 </div>
@@ -1466,14 +1469,14 @@
                     </div>
                     <div class="comparison-box correct-box">
                         <h4><span class="icon">✅</span> Better Approach</h4>
-                        <div class="code-block">5. Enter <strong>Contract Number</strong> under the Terms tab.<br><br>6. Enter <strong>Address</strong> in the Contact Information section.</div>
+                        <div class="code-block">5. Enter the <strong>Contract Number</strong> under the Terms tab.<br><br>6. Enter the <strong>Address</strong> in the Contact Information section.</div>
                         <p style="margin-top: 10px; font-size: 0.9em;"><strong>Why it works:</strong> Only the elements receiving interaction (field names) are bolded. Clear and unambiguous.</p>
                     </div>
                 </div>
 
                 <div class="example-box">
                     <div class="example-label">📚 Examples Showing When to Bold</div>
-                    <div class="code-block"><strong>Bold - User Interacts:</strong><br>✅ Enter <strong>Invoice Date</strong>.<br>✅ Click <strong>Submit</strong> to complete the process.<br>✅ Select <strong>Worker Type</strong>.<br>✅ Check the <strong>Recurring Invoice</strong> box.<br><br><strong>Don't Bold - No Direct Interaction:</strong><br>✅ The System Date field will auto-populate.<br>✅ Navigate to the supplier invoice page.<br>✅ Review information in the Contract Details section.<br>✅ The Invoice Amount displays in the upper right corner.</div>
+                    <div class="code-block"><strong>Bold - User Interacts:</strong><br>✅ Enter an <strong>Invoice Date</strong>.<br>✅ Click <strong>Submit</strong> to complete the process.<br>✅ Select a <strong>Worker Type</strong>.<br>✅ Check the <strong>Recurring Invoice</strong> box.<br><br><strong>Don't Bold - No Direct Interaction:</strong><br>✅ The System Date field will auto-populate.<br>✅ Navigate to the supplier invoice page.<br>✅ Review information in the Contract Details section.<br>✅ The Invoice Amount displays in the upper right corner.</div>
                 </div>
 
                 <div class="tip-box">
@@ -1523,7 +1526,7 @@
                 <div class="comparison-container">
                     <div class="comparison-box incorrect-box">
                         <h4><span class="icon">❌</span> Location First (Room for Improvement)</h4>
-                        <div class="code-block">❌ Under the Time Clock section, click Check In.<br><br>❌ In the Contract tab, enter Contract Number.<br><br>❌ From the dropdown menu, select Payment Type.<br><br>❌ On the Details tab, update Supplier Information.</div>
+                        <div class="code-block">❌ Under the Time Clock section, click <strong>Check In</strong>.<br><br>❌ In the Contract tab, enter <strong>Contract Number</strong>.<br><br>❌ From the dropdown menu, select <strong>Payment Type</strong>.<br><br>❌ On the Details tab, update <strong>Supplier Information</strong>.</div>
                         <div class="improve-note">
                             <strong>Improve by:</strong> Starting with the action. Users have to read the entire sentence to discover what action to take.
                         </div>
@@ -1548,7 +1551,7 @@
 
                 <div class="example-box">
                     <div class="example-label">✓ Examples - Action First</div>
-                    <div class="code-block">1. Search for and select <strong>Create Supplier Contract</strong> in the search bar.<br><br>2. Click the <strong>Supplier</strong> for the new contract.<br><br>3. Select <strong>Contract Type</strong>.<br><br>4. Enter <strong>Contract Title</strong>.<br><br>5. Select <strong>Review Invoice</strong>.<br><br>6. Click <strong>Submit</strong> to route to approvers.<br><br>7. Select<strong>Service Lines</strong>.<br><br>8. Select <strong>Recurring Invoice</strong>.</div>
+                    <div class="code-block">1. Enter "Create Supplier Contract" in the search bar and click the task.<br><br>2. Select the <strong>Supplier</strong> for the new contract.<br><br>3. Select the <strong>Contract Type</strong>.<br><br>4. Enter the <strong>Contract Title</strong>.<br><br>5. Click <strong>Submit</strong> to route the process to approvers.<br><br>
                 </div>
 
                 <div class="tip-box">
@@ -1556,7 +1559,7 @@
                     <p><strong>Before:</strong> "In the [location], [action] [element]"</p>
                     <p style="margin-top: 10px;"><strong>After:</strong> "[Action] <strong>[element]</strong> in the [location]"</p>
                     <p style="margin-top: 15px; font-style: italic;">Example transformation:<br>
-                    "In the dropdown menu, select Payment Terms" →<br>
+                    "In the dropdown menu, select <strong>Payment Terms</strong>" →<br>
                     "Select <strong>Payment Terms</strong> from the dropdown menu"</p>
                 </div>
             </section>
@@ -1586,7 +1589,7 @@
                     </div>
                     <div class="comparison-box correct-box">
                         <h4><span class="icon">✅</span> Better Approach</h4>
-                        <div class="code-block">7. Click <strong>Submit</strong> to complete the process.<br><br>-- OR --<br><br>8. Click <strong>Submit</strong> to route to approvers.</div>
+                        <div class="code-block">7. Click <strong>Submit</strong> to complete the process.<br><br>-- OR --<br><br>8. Click <strong>Submit</strong> to route the process to approvers.</div>
                         <p style="margin-top: 10px; font-size: 0.9em;"><strong>Why it works:</strong> User knows exactly what to expect after clicking Submit.</p>
                     </div>
                 </div>
@@ -1611,13 +1614,13 @@
                             <li>The task goes to others for review</li>
                             <li>Additional steps occur after submission</li>
                         </ul>
-                        <div class="code-block" style="margin-top: 10px;">23. Click <strong>Submit</strong> to route to approvers.</div>
+                        <div class="code-block" style="margin-top: 10px;">23. Click <strong>Submit</strong> to route the process to approvers.</div>
                     </div>
                 </div>
 
                 <div class="example-box">
                     <div class="example-label">✓ Real Examples from Reference Guides</div>
-                    <div class="code-block"><strong>Example 1: Approval Workflow</strong><br>20. Click <strong>Submit</strong> to start the organization assignments <br>    sub-process.<br>21. Navigate to My Tasks, open <strong>Change Organization Assignments</strong> <br>    to verify or update the position's organization details as needed.<br>22. From My Tasks, complete the costing questionnaire as applicable.<br>23. Click <strong>Submit</strong> to route to approvers.<br><br><strong>Example 2: Process Complete</strong><br>6. Select the <strong>Frozen</strong> checkbox to freeze the position or <br>   deselect it to unfreeze the position.<br>7. Click <strong>Submit</strong> to complete the process.<br><br><strong>Example 3: Supplier Invoice Process</strong><br>8. Review and confirm all invoice details.<br>9. Click <strong>Submit</strong> to route to approvers.</div>
+                    <div class="code-block"><strong>Example 1: Approval Workflow</strong><br>20. Click <strong>Submit</strong> to start the organization assignments process.<br>21. Click the <strong>My Tasks</strong> icon.<br>22. Click <strong>Change Organization Assignments</strong> to verify or update the position's organization details as needed.<br>23. Complete the costing questionnaire as applicable.<br>24. Click <strong>Submit</strong> to route the process to approvers.<br><br><strong>Example 2: Process Complete</strong><br>6. Select the <strong>Frozen</strong> checkbox to freeze the position or <br>   deselect it to unfreeze the position.<br>7. Click <strong>Submit</strong> to complete the process.<br><br><strong>Example 3: Supplier Invoice Process</strong><br>8. Review and confirm all invoice details.<br>9. Click <strong>Submit</strong> to route the process to approvers.</div>
                 </div>
 
                 <div class="quiz-container">
@@ -1634,7 +1637,7 @@
                     </div>
                     <div class="quiz-option" onclick="checkAnswer(this, true, 4)">
                         <input type="radio" name="q4">
-                        <label>C) 15. Click <strong>Submit</strong> to route to approvers.</label>
+                        <label>C) 15. Click <strong>Submit</strong> to route the process to approvers.</label>
                     </div>
                     <div id="feedback4" class="feedback"></div>
                 </div>
@@ -1975,52 +1978,52 @@
             }
         }
 
-        // Sorting Game
-        const sortingCards = [
-            {
-                content: `5. If adding dependent information:
-   • Enter dependent name.
-   • Enter date of birth.
-   • Select relationship type.`,
-                correct: true,
-                explanation: "Correct! These are conditional bullets - only needed IF adding dependents."
-            },
-            {
-                content: `8. Complete the following required fields:
-   • Supplier Name
-   • Contract Amount
-   • Effective Date`,
-                correct: false,
-                explanation: "Incorrect! These are REQUIRED fields, so they should use substeps (a, b, c) not bullets."
-            },
-            {
-                content: `12. Enter position details:
-   a. Job Profile
-   b. Location
-   c. Time Type
-   d. Scheduled Weekly Hours`,
-                correct: true,
-                explanation: "Correct! These are required substeps with proper formatting."
-            },
-            {
-                content: `3. Select benefit options as applicable:
-   a. Health Insurance
-   b. Dental Insurance
-   c. Vision Insurance
-   d. Life Insurance`,
-                correct: false,
-                explanation: "Incorrect! Since these are conditional (as applicable), they should use bullets, not substeps."
-            },
-            {
-                content: `15. Optional: Add worktags from available categories:
-   • Grant
-   • Project
-   • Cost Center
-   • Fund`,
-                correct: true,
-                explanation: "Correct! These are examples of optional choices, perfect for bullets."
-            }
-        ];
+       // Sorting Game
+const sortingCards = [
+    {
+        content: `5. If adding dependent information, complete the following:
+   a. Enter the <strong>Dependent Name</strong>.
+   b. Enter the <strong>Dependent Date of Birth</strong>.
+   c. Select a <strong>Dependent Relationship Type</strong>.`,
+        correct: true,
+        explanation: "Correct! If the user is adding dependent information, ALL three substeps must be completed together."
+    },
+    {
+        content: `8. Click the <strong>Supplier Tab</strong> and enter supplier details:
+   • <strong>Supplier Name</strong>
+   • <strong>Contract Amount</strong>
+   • <strong>Effective Date</strong>`,
+        correct: false,
+        explanation: "Incorrect! These are ALL required fields under supplier details, so they should use substeps (a, b, c) not bullets."
+    },
+    {
+        content: `12. Enter position details:
+   a. <strong>Job Profile</strong>
+   b. <strong>Location</strong>
+   c. <strong>Time Type</strong>
+   d. <strong>Scheduled Weekly Hours</strong>`,
+        correct: true,
+        explanation: "Correct! These are required substeps—all must be completed together."
+    },
+    {
+        content: `3. Select benefit options as applicable:
+   a. <strong>Health Insurance</strong>
+   b. <strong>Dental Insurance</strong>
+   c. <strong>Vision Insurance</strong>
+   d. <strong>Life Insurance</strong>`,
+        correct: false,
+        explanation: "Incorrect! Since these are conditional (as applicable), the user might select one, some, or all. These should use bullets, not substeps."
+    },
+    {
+        content: `15. Add worktags from available categories as needed:
+   • <strong>Grant</strong>
+   • <strong>Project</strong>
+   • <strong>Cost Center</strong>
+   • <strong>Fund</strong>`,
+        correct: true,
+        explanation: "Correct! User might add one, several, or all worktags depending on their needs. 'As needed' signals this flexibility."
+    }
+];
 
         let currentCardIndex = 0;
         let sortScore = 0;
